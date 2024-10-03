@@ -10,6 +10,7 @@ import { UserModule } from './user/user.module';
 import { ProductsService } from './products/products.service';
 import { ProductsController } from './products/products.controller';
 import { ProductsModule } from './products/products.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -21,7 +22,8 @@ import { ProductsModule } from './products/products.module';
       synchronize: true,                // Synchronize models with the database
     }),
     UserModule,
-    ProductsModule
+    ProductsModule,
+    AuthModule
   ],
   controllers: [AppController, UserController, ProductsController],
   providers: [AppService, UserService, ProductsService],
